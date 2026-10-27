@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <span class="eyebrow">Back &middot; Forward &middot; Repeat</span>
+      <h1>Mini <em>Browser</em></h1>
+    </header>
+
+    <section class="window" aria-label="Mini browser">
+      <div class="toolbar">
+        <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <button id="backBtn" class="icon" aria-label="Back" title="Back (Alt + &larr;)">
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button id="fwdBtn" class="icon" aria-label="Forward" title="Forward (Alt + &rarr;)">
+          <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <input id="address" type="text" aria-label="Address bar" spellcheck="false">
+        <button id="goBtn" class="go">Go</button>
+      </div>
+
+      <div class="page" id="page" aria-live="polite"></div>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="history" aria-label="History">
+      <div class="history-head">
+        <h2>History</h2>
+        <button id="clearBtn" class="ghost">Clear history</button>
+      </div>
+      <ol id="historyList"></ol>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
